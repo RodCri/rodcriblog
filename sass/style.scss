@@ -1,0 +1,198 @@
+@use 'variables' as v;
+@import url('https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  font-size: 1.8rem;
+  font-family: "Victor Mono", monospace;
+  background-color: v.$bg;
+  color: v.$white;
+}
+.header{
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  .nav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    &__logo{
+      font-size: 2rem;
+      color: v.$title;
+      font-weight: 700;
+    }
+    &__options{
+      .nav__list{
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        .nav__item{
+          cursor: pointer;
+          transition: all .3s ease;
+          &:hover{
+            color: v.$title;
+          }
+        }
+      }
+    }
+  }
+}
+.hero{
+  width: 100%;
+  max-width: 1440px;
+  margin: 5rem auto;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  &__info{
+    width: 50%;
+    .hero__title{
+      font-size: 5rem;
+      font-weight: 700;
+      color: v.$white;
+      line-height: 1.6;
+      margin-bottom: 3rem;
+      span{
+        color: v.$title;
+      }
+    }
+    .hero__profile{
+      font-size: 1.7rem;
+      line-height: 1.7;
+      max-width: 600px;
+      margin-bottom: 5rem;
+    }
+    .hero__cta{
+      background-color: v.$title;
+      border-radius: 2rem;
+      margin-bottom: 5rem;
+      color: v.$white;
+      padding: 1.5rem 4rem;
+      border: 1px solid v.$title;
+      font-size: 1.6rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .3s ease;
+      &:hover{
+        background-color: v.$bg;
+        border-color: 1px solid v.$title;
+        color: v.$title;
+      }
+    }
+    .hero__social{
+      display: flex;
+      gap: 1rem;
+      .hero__icon{
+        width: 40px;
+        cursor: pointer;
+        transition: all .3s ease;
+        &:hover{
+          transform: translateY(-4px);
+        }
+      }
+    }
+  }
+  &__img{
+    width: 50%;
+    .hero__avatar{
+      width: 100%;
+      border-radius: 2rem;
+      box-shadow: 0 5px 15px 0 v.$title;
+    }
+  }
+}
+.content{
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  .projects{
+    &__title{
+      font-size: 3rem;
+      margin-bottom: 3rem;
+      span{
+        color: v.$title;
+      }
+    }
+    &__content{
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      .projects__card{
+        border: 1px solid v.$title;
+        box-shadow: 0 5px 5px 0 v.$title;
+        display: flex;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        background-color: v.$bg-card;
+        gap: 2rem;
+        align-items: center;
+        cursor: pointer;
+        .project__img{
+          width: 20%;
+          .project__icon{
+            width: 100%;
+          }
+        }
+        .project__info{
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          .project__name{
+            font-weight: 600;
+            font-size: 2rem;
+          }
+          .project__description{
+            font-size: 1.4rem;
+            color: v.$text-card;
+            font-weight: 400;
+            line-height: 1.6;
+          }
+          .project__skills{
+            display: flex;
+            gap: 1rem;
+            .project__skill{
+              border-radius: 2rem;
+              padding: .5rem 1rem;
+              font-size: 1.2rem;
+              color: v.$bg;
+              font-weight: 600;
+            }
+            .asttro{
+              background-color: v.$astro;
+            }
+            .web{
+              background-color: v.$web;
+            }
+            .tailwind{
+              background-color: v.$tailwind;
+            }
+            .ts{
+              background-color: v.$ts;
+            }
+            .next{
+              background-color: v.$next;
+            }
+            .js{
+              background-color: v.$js;
+            }
+            .blog{
+              background-color: v.$blog;
+            }
+            .boot{
+              background-color: v.$bs;
+            }
+          }
+        }
+      }
+    }
+  }
+}
